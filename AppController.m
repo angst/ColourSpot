@@ -51,7 +51,12 @@
 		// update the statusbar
 		[self updateTitle:screenShot];
 		[self updatePreview:screenShot];
+
+//		[[statusItem view] setNeedsDisplay:YES]; // doesn't fix it!
+//		[statusItem setImage:previewImage]; // resetting the iamge doesn't fix it either
+        CFRelease(screenShot);
 	}
+	CFRelease(ourEvent);
 }
 
 - (void) updatePreview:(CGImageRef)image
@@ -76,16 +81,16 @@
 	[attributes setObject:[NSFont fontWithName:@"Monaco" size:12] forKey:NSFontAttributeName];
 	NSAttributedString *as = [[NSAttributedString alloc] initWithString:hex attributes: attributes];	
 	
-	[statusItem setTitle: (NSString *)as];
+	[statusItem setAttributedTitle: as];
 }
 
 - (void) awakeFromNib
 {
 	// create the image to display color in the menu bar
 	NSSize size;
-	size.width = 15;
-	size.height = 15;
-	previewImage = [[[NSImage alloc] initWithSize:size] autorelease];	
+	size.width = 16;
+	size.height = 16;
+	previewImage = [[[NSImage alloc] initWithSize:size] retain];	
 	
 	// create the statusbar
 	NSMenu *menu = [self createMenu];
@@ -95,8 +100,8 @@
 	[statusItem setTitle: @"colour"];	
 	[statusItem setMenu:menu];
 	[statusItem setHighlightMode: YES];
-			
-	[[NSTimer scheduledTimerWithTimeInterval:0.08 target:self 
+
+	[[NSTimer scheduledTimerWithTimeInterval:0.1 target:self 
 									selector:@selector(followMouse:) userInfo:nil repeats:YES] retain];
 }
 
