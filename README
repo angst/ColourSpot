@@ -1,0 +1,9 @@
+WARNING: this code leaks memory!  ~1MB every 20 seconds (eg, welcome to my first obj-c program)
+
+Motivation: a quicker way to grab a color - hold a modifer (shift) and see the hex rgb color in the statusbar.
+
+Once the memory leak is fixed then I want to add another interaction to quickly copy the hex rgb into the clipboard - current thoughts:
+
+  * press control while holding shift - downside is that pressing ctrl & shift together is common during text editing and modifying the clipboard would be bad!
+  * clicking the color in the statusmenu copies it - downside is that it requires mouse movement
+
