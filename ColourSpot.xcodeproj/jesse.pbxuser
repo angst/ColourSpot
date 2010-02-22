@@ -10,17 +10,17 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Release;
-		activeExecutable = 8804078C1130A8C800C4EDB9 /* Colour Spot */;
-		activeTarget = 8D1107260486CEB800E47090 /* Colour Spot */;
+		activeExecutable = 8804078C1130A8C800C4EDB9 /* ColourSpot */;
+		activeTarget = 8D1107260486CEB800E47090 /* ColourSpot */;
 		addToTargets = (
-			8D1107260486CEB800E47090 /* Colour Spot */,
+			8D1107260486CEB800E47090 /* ColourSpot */,
 		);
 		breakpoints = (
 			88DC254C113209AF009CB545 /* AppController.m:101 */,
 		);
 		codeSenseManager = 880407AC1130A8D800C4EDB9 /* Code sense */;
 		executables = (
-			8804078C1130A8C800C4EDB9 /* Colour Spot */,
+			8804078C1130A8C800C4EDB9 /* ColourSpot */,
 		);
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -108,7 +108,7 @@
 			sepNavVisRange = "{0, 253}";
 		};
 	};
-	8804078C1130A8C800C4EDB9 /* Colour Spot */ = {
+	8804078C1130A8C800C4EDB9 /* ColourSpot */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
@@ -131,7 +131,7 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 1;
-		name = "Colour Spot";
+		name = ColourSpot;
 		savedGlobals = {
 		};
 		showTypeColumn = 0;
@@ -404,10 +404,10 @@
 		vrLen = 1258;
 		vrLoc = 1994;
 	};
-	8D1107260486CEB800E47090 /* Colour Spot */ = {
+	8D1107260486CEB800E47090 /* ColourSpot */ = {
 		activeExec = 0;
 		executables = (
-			8804078C1130A8C800C4EDB9 /* Colour Spot */,
+			8804078C1130A8C800C4EDB9 /* ColourSpot */,
 		);
 	};
 	F62BCAF70EE8D605002C8329 /* AppController.h */ = {
