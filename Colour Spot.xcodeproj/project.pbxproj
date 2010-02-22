@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		88DC257611320FB3009CB545 /* colour.icns in Resources */ = {isa = PBXBuildFile; fileRef = 88DC257411320FB3009CB545 /* colour.icns */; };
+		88DC257711320FB3009CB545 /* colour-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 88DC257511320FB3009CB545 /* colour-16.png */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -24,6 +26,8 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Colour Spot_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Colour Spot_Prefix.pch"; sourceTree = "<group>"; };
+		88DC257411320FB3009CB545 /* colour.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = colour.icns; sourceTree = "<group>"; };
+		88DC257511320FB3009CB545 /* colour-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "colour-16.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Colour Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colour Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62BCAF70EE8D605002C8329 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				88DC257411320FB3009CB545 /* colour.icns */,
+				88DC257511320FB3009CB545 /* colour-16.png */,
 				F62BCAF70EE8D605002C8329 /* AppController.h */,
 				F62BCAF80EE8D605002C8329 /* AppController.m */,
 			);
@@ -165,6 +171,8 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				88DC257611320FB3009CB545 /* colour.icns in Resources */,
+				88DC257711320FB3009CB545 /* colour-16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

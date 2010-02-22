@@ -98,7 +98,6 @@
 	CFRelease(m_DataRef);
 	CFRelease(attributes);
 	CFRelease(as);
-	
 }
 
 - (void) awakeFromNib
@@ -108,11 +107,12 @@
 	NSMenu *menu = [self createMenu];
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:-1] retain];
 	[statusItem setTarget: self];
-	[statusItem setTitle: @"colour"];	
+//	[statusItem setTitle: @"C"];	
+	[statusItem setImage: [NSImage imageNamed:@"colour-16.png"]];
 	[statusItem setMenu:menu];
 	[statusItem setHighlightMode: YES];
 
-	[[NSTimer scheduledTimerWithTimeInterval:0.1 target:self 
+	[[NSTimer scheduledTimerWithTimeInterval:0.2 target:self 
 									selector:@selector(followMouse:) userInfo:nil repeats:YES] retain];
 }
 
