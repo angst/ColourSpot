@@ -16,7 +16,6 @@
 	
 	IBOutlet NSWindow *mainWindow;
 	NSStatusItem *statusItem;
-	NSImage *previewImage;
 }
 
 - (NSMenu *) createMenu;

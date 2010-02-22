@@ -52,8 +52,6 @@
 		[self updateTitle:screenShot];
 		[self updatePreview:screenShot];
 
-//		[[statusItem view] setNeedsDisplay:YES]; // doesn't fix it!
-//		[statusItem setImage:previewImage]; // resetting the iamge doesn't fix it either
         CFRelease(screenShot);
 	}
 	CFRelease(ourEvent);
@@ -61,6 +59,17 @@
 
 - (void) updatePreview:(CGImageRef)image
 {
+	// IDEA: [statusItem image] returns an image that we can update?
+	
+	// FIXME: try to re-use as much as possible!
+	NSImage *previewImage;
+
+	// create the image to display color in the menu bar
+	NSSize size;
+	size.width = 16;
+	size.height = 16;
+	previewImage = [[NSImage alloc] initWithSize:size];
+	
 	CGRect imageRect;
 	imageRect.size.height = 16;
 	imageRect.size.width = 16;
@@ -69,6 +78,10 @@
 	CGContextRef imageContext = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
 	CGContextDrawImage(imageContext, imageRect, image);
 	[previewImage unlockFocus];
+	
+	[statusItem setImage: previewImage];
+
+	CFRelease(previewImage);
 }
 
 - (void) updateTitle:(CGImageRef)image
@@ -82,21 +95,19 @@
 	NSAttributedString *as = [[NSAttributedString alloc] initWithString:hex attributes: attributes];	
 	
 	[statusItem setAttributedTitle: as];
+	CFRelease(m_DataRef);
+	CFRelease(attributes);
+	CFRelease(as);
+	
 }
 
 - (void) awakeFromNib
 {
-	// create the image to display color in the menu bar
-	NSSize size;
-	size.width = 16;
-	size.height = 16;
-	previewImage = [[[NSImage alloc] initWithSize:size] retain];	
 	
 	// create the statusbar
 	NSMenu *menu = [self createMenu];
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:-1] retain];
 	[statusItem setTarget: self];
-	[statusItem setImage: previewImage];
 	[statusItem setTitle: @"colour"];	
 	[statusItem setMenu:menu];
 	[statusItem setHighlightMode: YES];
