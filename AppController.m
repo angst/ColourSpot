@@ -42,7 +42,7 @@
 	CGPoint point = CGEventGetLocation(ourEvent);
 	
 	// only update the colour spot if shift is pressed
-	if (CGEventGetFlags(ourEvent) & kCGEventFlagMaskShift) {
+	if (CGEventGetFlags(ourEvent) & kCGEventFlagMaskAlternate) {
 	
 		// take a screenshot of the pixel under the mouse cursor
 		CGRect rect = CGRectMake(point.x, point.y, 1, 1);
@@ -107,7 +107,6 @@
 	NSMenu *menu = [self createMenu];
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:-1] retain];
 	[statusItem setTarget: self];
-//	[statusItem setTitle: @"C"];	
 	[statusItem setImage: [NSImage imageNamed:@"colour-16.png"]];
 	[statusItem setMenu:menu];
 	[statusItem setHighlightMode: YES];
